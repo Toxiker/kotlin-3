@@ -43,16 +43,20 @@ fun NavigationScreen() {
             NavigationButton(stringResource(id = R.string.button_box), Screen.Box)
             NavigationButton(stringResource(id = R.string.button_surface), Screen.Surface)
             NavigationButton(stringResource(id = R.string.button_scaffold), Screen.Scaffold)
+            NavigationButton(stringResource(id = R.string.scroll), Screen.Scrolling)
+            NavigationButton(stringResource(id = R.string.List), Screen.List)
+            NavigationButton(stringResource(id = R.string.Grid), Screen.Grid)
+        }
         }
     }
-}
+
 
 @Composable
 fun NavigationButton(text: String, screen: Screen) {
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 16.dp),
+            .padding(start = 8.dp, end = 8.dp, top = 8.dp),
         shape = RoundedCornerShape(4.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
         onClick = { FundamentalsRouter.navigateTo(screen) }
